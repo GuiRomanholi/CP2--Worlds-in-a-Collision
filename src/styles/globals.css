@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @import 'forca.css';
+@import 'calculo.css';
+@import 'cronologia.css';
+@import 'velocidade.css';
+@import 'not-found.css';
 
 @layer components {
     .cabecalho {
@@ -20,4 +24,13 @@
     .cabecalho li {
         @apply hover:text-blue-300;
     }
+
+    .rodape {
+        @apply bg-blue-600 p-4 text-white;
+    }
+
+    .rodape h1 {
+        @apply text-2xl font-bold;
+    }
+
 }

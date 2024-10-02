@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.cronologia-container {
+  @apply bg-gray-100 p-6 rounded-lg shadow-lg;
+}
+
+.cronologia-title {
+  @apply text-2xl font-bold text-gray-800 mb-4;
+}
+
+.cronologia-article {
+  @apply bg-white p-4 rounded-md shadow;
+}
+
+.cronologia-paragraph {
+  @apply text-gray-700 leading-relaxed;
+}

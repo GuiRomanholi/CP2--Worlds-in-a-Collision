@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const fetchImagesFromNasa = async () => {
- const apiKey = ''; 
+ const apiKey = 'aziimFV1LXEzbGMhsqLiAFBnw5g6fIH09Xo4oDiJ'; 
  const nasaUrl = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}&count=5`; 
  const response = await fetch(nasaUrl);
  const data = await response.json();
