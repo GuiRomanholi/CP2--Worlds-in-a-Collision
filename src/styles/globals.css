@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'forca.css';
+
 @layer components {
     .cabecalho {
         @apply bg-blue-600 p-4 text-white;

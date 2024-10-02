@@ -9,22 +9,22 @@
 ## Descrição
 
 Nesse projeto de cp3 foi desenvolvido utilizando Next.JS e 
-TypeScript para a codificação, e Tailwind CSS para a estilização. O projeto 
-inclui quatro páginas principais:
+TypeScript para a codificação, e Tailwind CSS para a estilização. 
+
+## Especificações Técnicas
 
 - [x]  **page.tsx**
 - [x] **layout.tsx**
 - [x]  **not-found.tsx**
 - [x] **route.tsx**
-- [x] **Implementação de rotas dinâmicas no formato [slug] para páginas que recebam parâmetros da URL.**
-- [x] **Criação de uma página de erro personalizada em not-found.tsx, utilizando o componente de imagem do Next.js para exibir uma ilustração de erro.**
 
-## Especificações Técnicas
+## Implementações do projeto
 
-- [x] **Figma:** Para criação do protótipo e definição do design.
-- [x] **React:** Biblioteca JavaScript para construção da interface do usuário.
-- [x] **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
-- [x] **CSS3 Modules:** Técnica de estilização que permite a aplicação de estilos localizados.
+- [x] Implementação de rotas dinâmicas no formato [slug] para páginas que recebam parâmetros da URL.
+- [x] Criação de uma página de erro personalizada em not-found.tsx, utilizando o componente de imagem do Next.js para exibir uma ilustração de erro.
+- [x] Implementação de um endpoint no arquivo route.tsx
+- [x] Endpoint sem parâmetros que consome a API da NASA e retorna uma ou mais imagens.
+- [x] O endpoint deve utilizar o método HTTP GET.
 
 
 
