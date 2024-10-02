@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Cabecalho() {
   return (
-    <div>
+    <div className='cabecalho'>
         <h1>Cabecalho</h1>
         <ul>
             <li><Link href="/">Home</Link></li>

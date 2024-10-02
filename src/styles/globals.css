@@ -2,8 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .cabecalho{
-        
+@layer components {
+    .cabecalho {
+        @apply bg-blue-600 p-4 text-white;
+    }
+
+    .cabecalho h1 {
+        @apply text-2xl font-bold;
+    }
+
+    .cabecalho ul {
+        @apply flex space-x-4 mt-2;
+    }
+
+    .cabecalho li {
+        @apply hover:text-blue-300;
     }
 }
