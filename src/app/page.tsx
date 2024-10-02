@@ -13,7 +13,7 @@ export default function Home() {
           revolucionárias sobre o impacto de eventos astronômicos em nosso planeta. 
           Prepare-se para questionar o que você sabia sobre o passado!</p>
       </article>
-      { <Image className='home-image' src="/img/livro.jpg" alt="Calculo." width={200} height={200}/>}
+      { <Image className='home-image' src="/img/livro.jpg" alt="Calculo." width={300} height={300}/>}
     </div>
   )
 }
