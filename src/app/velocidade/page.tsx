@@ -6,23 +6,35 @@ import { useEffect, useState } from "react";
 
 export default function Velocidade() {
 
-  const [imagem, setImagem] = useState<TipoImagem>({copyright:"", date:"",explanation:"",hdurl:"",media_type:"",service_version:"",title:"",url:""});
-  useEffect(() => {
-    async function chamadaApi() {
-        try {
-            const response = await fetch('http://localhost:3000/api/Imagens');
-            const jsonData = await response.json();
-            // Número aleatório entre 0 e 9
-            const numeroAleatorio = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min;
-            const indice = numeroAleatorio(0, 9);
-            setImagem(jsonData[indice]);
-        } catch {
-            console.log("ERRO");
-        }
-    }
+  const [imagem, atualizarImagem] = useState<TipoImagem>({
+    copyright: "",
+    date: "",
+    explanation: "",
+    hdurl: "",
+    media_type: "",
+    service_version: "",
+    title: "",
+    url: ""
+  });
 
-    chamadaApi()
-}, []);
+  useEffect(() => {
+    const buscarImagens = async () => {
+      try {
+        const resposta = await fetch('http://localhost:3000/api/Imagens');
+        const dados = await resposta.json();
+        
+        const obterIndiceAleatorio = (min: number, max: number) => 
+          Math.floor(Math.random() * (max - min)) + min;
+        
+        const indiceSelecionado = obterIndiceAleatorio(0, 9);
+        atualizarImagem(dados[indiceSelecionado]);
+      } catch (erro) {
+        console.error("Erro ao buscar imagens:", erro);
+      }
+    };
+
+    buscarImagens();
+  }, []);
 
   return (
     <div className="velocidade-container">
@@ -32,7 +44,6 @@ export default function Velocidade() {
         </article>
         <div>
           <Image className="m-12" src={typeof(imagem.url) == 'string' ? imagem.url : ""}width={500} height={250}alt={typeof(imagem.explanation) == 'string' ? imagem.explanation : ""}/>
-          <p className="Ps">{imagem.explanation}</p>
       </div>
     </div>
   )

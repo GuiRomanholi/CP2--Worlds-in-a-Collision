@@ -4,27 +4,39 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { TipoImagem } from "@/types";
 import React from 'react';
+import "../../styles/globals.css"
 
 export default function Cronologia() {
 
-  const [imagem, setImagem] = useState<TipoImagem>({copyright:"", date:"",explanation:"",hdurl:"",media_type:"",service_version:"",title:"",url:""});
-    useEffect(() => {
-      async function chamadaApi() {
-          try {
-            const response = await fetch('http://localhost:3000/api/Imagens');
-            const jsonData = await response.json();
-            // Número aleatório entre 0 e 9
-            const numeroAleatorio = (min: number, max: number) => Math.floor(Math.random() * (max - min)) + min;
-            const indice = numeroAleatorio(0, 9);
-            setImagem(jsonData[indice]);
-          } catch {
-              console.log("ERRO nossa api");
-          }
+  const [imagem, atualizarImagem] = useState<TipoImagem>({
+    copyright: "",
+    date: "",
+    explanation: "",
+    hdurl: "",
+    media_type: "",
+    service_version: "",
+    title: "",
+    url: ""
+  });
+
+  useEffect(() => {
+    const buscarImagens = async () => {
+      try {
+        const resposta = await fetch('http://localhost:3000/api/Imagens');
+        const dados = await resposta.json();
+        
+        const obterIndiceAleatorio = (min: number, max: number) => 
+          Math.floor(Math.random() * (max - min)) + min;
+        
+        const indiceSelecionado = obterIndiceAleatorio(0, 9);
+        atualizarImagem(dados[indiceSelecionado]);
+      } catch (erro) {
+        console.error("Erro ao buscar imagens:", erro);
       }
+    };
 
-      chamadaApi()
+    buscarImagens();
   }, []);
-
 
 
   return (
@@ -41,8 +53,7 @@ export default function Cronologia() {
           </p>
         </article>
         <div>
-          <Image src={typeof(imagem.url) == 'string' ? imagem.url : ""} width={500} height={250}alt={typeof(imagem.explanation) == 'string' ? imagem.explanation : ""}/>
-          <p className="Ps">{imagem.explanation}</p>
+          <Image className="calculo-image" src={typeof(imagem.url) == 'string' ? imagem.url : ""} width={500} height={250}alt={typeof(imagem.explanation) == 'string' ? imagem.explanation : ""}/>
         </div>
       </div>
     </div>
