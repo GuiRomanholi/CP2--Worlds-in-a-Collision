@@ -17,7 +17,7 @@ inclui quatro páginas principais:
 - [x]  **not-found.tsx**
 - [x] **route.tsx**
 - [x] **Implementação de rotas dinâmicas no formato [slug] para páginas que recebam parâmetros da URL.**
-- [x] **Cadastro**
+- [x] **Criação de uma página de erro personalizada em not-found.tsx, utilizando o componente de imagem do Next.js para exibir uma ilustração de erro.**
 
 ## Especificações Técnicas
 
