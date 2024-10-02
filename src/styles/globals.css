@@ -27,10 +27,27 @@
 
     .rodape {
         @apply bg-blue-600 p-4 text-white;
+        @apply text-center
     }
 
     .rodape h1 {
         @apply text-2xl font-bold;
     }
+
+    .home-container {
+        @apply max-w-2xl mx-auto p-6;
+      }
+    
+      .home-title {
+        @apply text-4xl font-bold text-center mb-4;
+      }
+    
+      .home-article {
+        @apply text-lg leading-relaxed mb-6;
+      }
+    
+      .home-image {
+        @apply w-full h-auto rounded-lg; /* Imagem responsiva e com bordas arredondadas */
+      }
 
 }

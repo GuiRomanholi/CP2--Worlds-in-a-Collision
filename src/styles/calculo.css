@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+  .calculo-container {
+    @apply max-w-2xl mx-auto p-4;
+  }
+
+  .calculo-title {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  .calculo-article {
+    @apply text-lg leading-relaxed mb-4;
+  }
+
+  .calculo-image {
+    @apply w-full h-auto; /* Imagem responsiva */
+  }
+}
