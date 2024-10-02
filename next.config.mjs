@@ -4,7 +4,7 @@ const nextConfig = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: '',
+                hostname: 'apod.nasa.gov',
                 pathname: '/**',
                 port:'',
             }
