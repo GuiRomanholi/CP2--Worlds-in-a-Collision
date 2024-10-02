@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Rodape() {
+export default function Calculo() {
   return (
     <div>
-        <h1>Rodape</h1>
+        <h1>Calculo</h1>
     </div>
   )
 }
