@@ -32,10 +32,10 @@ export default function Forca() {
         <article className="forca-article">
             <p>Velikovsky propôs que as forças eletromagnéticas entre planetas poderiam ter desempenhado um papel significativo nos encontros próximos, algo que contraria o modelo puramente gravitacional aceito na física celeste. Ele sugeriu que os cálculos gravitacionais sozinhos não explicavam adequadamente as interações planetárias propostas em suas teorias.</p>
         </article>
-        <div >
-          <Image src={typeof(imagem.url) == 'string' ? imagem.url : ""}width={500} height={250}alt={typeof(imagem.explanation) == 'string' ? imagem.explanation : ""}/>
-          <p className="Ps">{imagem.explanation}</p>
-        </div>
+        <div>
+                <Image className="m-12" src={typeof (imagem.url) == 'string' ? imagem.url : ""} width={500} height={250} alt={typeof (imagem.explanation) == 'string' ? imagem.explanation : ""} />
+                <p className="Ps">{imagem.explanation}</p>
+            </div>
     </div>
   )
 }

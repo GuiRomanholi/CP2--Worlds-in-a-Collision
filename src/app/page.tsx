@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 
 export default function Home() {
+
   return (
     <div className='home-container'>
       <h1 className='home-title'>Worlds in a Collision</h1>

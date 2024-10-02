@@ -6,7 +6,7 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'apod.nasa.gov',
                 pathname: '/**',
-                port:'',
+                port: '',
             }
         ],
     }
